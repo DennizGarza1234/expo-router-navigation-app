@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+## Expo Router Navigation App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Overview
 
-## Get started
+This project is a React Native application built using Expo Router to demonstrate different navigation techniques including link-based navigation, dynamic routing, and programmatic navigation.
 
-1. Install dependencies
+### Design Choices
 
-   ```bash
-   npm install
-   ```
+The application was structured using Expo Router’s file-based routing system to simplify navigation. Each screen was placed inside the `app` directory, allowing routes to be automatically generated based on file names.
 
-2. Start the app
+The Home page was designed as the central navigation hub, providing links to the About page and dynamic user profile pages. The About page was used to demonstrate push and replace navigation methods, while the User Profile page showcased dynamic routing by displaying a user ID passed through the URL.
 
-   ```bash
-   npx expo start
-   ```
+A simple and consistent UI was used across all screens, with centered text and a dark background to maintain readability and focus on functionality rather than styling.
 
-In the output, you'll find options to open the app in a
+### Navigation Techniques Implemented
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Link navigation using `<Link />`
+* Dynamic routing using `[id].tsx`
+* Push navigation using `router.push()`
+* Replace navigation using `router.replace()`
+* Programmatic navigation using `router.back()`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Challenges Encountered
 
-## Get a fresh project
+One challenge encountered was the default Expo template including a tab-based layout, which conflicted with the required file-based routing structure. This was resolved by removing the default layout and rebuilding the app directory manually.
 
-When you're ready, run:
+Another challenge was understanding the difference between push and replace navigation. Testing both methods helped clarify how push adds a new screen to the stack while replace removes the current screen and substitutes it.
 
-```bash
-npm run reset-project
-```
+Additionally, working with TypeScript (`.tsx` files) initially caused some confusion, but it was resolved by treating the files similarly to JavaScript while ignoring advanced typing features.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Conclusion
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project successfully demonstrates multiple navigation techniques in Expo Router and provides a clear understanding of how file-based routing works in React Native applications.
